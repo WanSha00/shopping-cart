@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
 function Navbar() {
-  const [menu, setMenu] = useState("shop");
+  const [menu, setMenu] = useState("home");
   const { name } = useParams();
 
   return (
@@ -19,15 +19,13 @@ function Navbar() {
         <ul className="nav-menu">
           <li
             onClick={() => {
-              setMenu("shop");
+              setMenu("home");
             }}
           >
             <Link style={{ textDecoration: "none" }} to="/">
-              Shop{" "}
-            </Link>{" "}
-            {menu === "shop" ? <hr /> : <></>}
-            {/* Shop
-            {menu === "shop" ? <hr /> : <></>} */}
+              Home
+            </Link>
+            {menu === "home" ? <hr /> : <></>}
           </li>
           <li
             onClick={() => {
@@ -35,11 +33,9 @@ function Navbar() {
             }}
           >
             <Link style={{ textDecoration: "none" }} to="/cat1">
-              Category 1{" "}
+              Chibis
             </Link>
             {menu === "cat1" ? <hr /> : <></>}
-
-            {/* Category 1{menu === "cat1" ? <hr /> : <></>} */}
           </li>
           <li
             onClick={() => {
@@ -47,13 +43,17 @@ function Navbar() {
             }}
           >
             <Link style={{ textDecoration: "none" }} to="/cat2">
-              Category 2{" "}
+              Cards
             </Link>
             {menu === "cat2" ? <hr /> : <></>}
-            {/* Category 2{menu === "cat2" ? <hr /> : <></>} */}
           </li>
         </ul>
-        <div className="nav-cart">
+        <div
+          className="nav-cart"
+          onClick={() => {
+            setMenu("");
+          }}
+        >
           <Link to="/cart">
             <img src={cart_icon} alt="" />
           </Link>
