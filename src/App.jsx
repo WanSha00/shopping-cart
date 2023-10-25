@@ -12,6 +12,8 @@ import ShopCategory from "./pages/ShopCategory";
 import Product from "./pages/Product";
 import Cart from "./pages/Cart";
 import Footer from "./components/footer/Footer";
+import chibis_banner from "./assets/chibis_banner.webp";
+import cards_banner from "./assets/cards_banner.webp";
 
 function App() {
   return (
@@ -24,8 +26,14 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<Shop />} />
-            <Route path="/cat1" element={<ShopCategory category="cat1" />} />
-            <Route path="/cat2" element={<ShopCategory category="cat2" />} />
+            <Route
+              path="/chibis"
+              element={<ShopCategory banner={chibis_banner} category="chibi" />}
+            />
+            <Route
+              path="/cards"
+              element={<ShopCategory banner={cards_banner} category="card" />}
+            />
             <Route path="/product" element={<Product />} />
             <Route path=":productId" element={<Product />} />
             <Route path="/cart" element={<Cart />} />

@@ -22,6 +22,7 @@
 .collections {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  margin-top: 70px;
+  margin: 20px 170px;
+  row-gap: 80px;
   gap: 30px;
 }

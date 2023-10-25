@@ -29,23 +29,23 @@ function Navbar() {
           </li>
           <li
             onClick={() => {
-              setMenu("cat1");
+              setMenu("chibis");
             }}
           >
-            <Link style={{ textDecoration: "none" }} to="/cat1">
+            <Link style={{ textDecoration: "none" }} to="/chibis">
               Chibis
             </Link>
-            {menu === "cat1" ? <hr /> : <></>}
+            {menu === "chibis" ? <hr /> : <></>}
           </li>
           <li
             onClick={() => {
-              setMenu("cat2");
+              setMenu("cards");
             }}
           >
-            <Link style={{ textDecoration: "none" }} to="/cat2">
+            <Link style={{ textDecoration: "none" }} to="/cards">
               Cards
             </Link>
-            {menu === "cat2" ? <hr /> : <></>}
+            {menu === "cards" ? <hr /> : <></>}
           </li>
         </ul>
         <div
