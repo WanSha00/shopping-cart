@@ -3,14 +3,13 @@
   height: 67vh;
   display: flex;
   margin: auto;
-  padding: 0px 140px;
+  padding: 0px 120px;
   margin-bottom: 150px;
   background: linear-gradient(
     180deg,
     rgb(176, 250, 255) 0%,
     rgb(244, 252, 253) 60%
   );
-  position: relative;
 }
 
 .offers-left {
@@ -45,15 +44,7 @@
 
 .offers-right {
   display: flex;
+  justify-content: flex-end;
+  align-items: end;
   flex: 1;
-  /* justify-content: flex-end; */
-  /* align-items: center; */
-  /* padding-top: 50px; */
-  /* position: relative; */
-}
-
-.offers-right img {
-  position: absolute;
-  top: -60px;
-  right: 50px;
 }

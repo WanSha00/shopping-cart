@@ -1,4 +1,5 @@
 import Hero from "../components/hero/Hero";
+import NewCollections from "../components/newCollections/NewCollections";
 import Offers from "../components/offers/Offers";
 import Popular from "../components/popular/Popular";
 
@@ -9,6 +10,7 @@ function Shop() {
         <Hero />
         <Popular />
         <Offers />
+        <NewCollections />
       </div>
     </>
   );
