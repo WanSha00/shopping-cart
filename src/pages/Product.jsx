@@ -3,6 +3,7 @@ import { ShopContext } from "../context/ShopContext";
 import Breadcrumbs from "../components/breadcrumbs/Breadcrumbs";
 import ProductDisplay from "../components/productDisplay/ProductDisplay";
 import { useContext } from "react";
+import RelatedProducts from "../components/relatedProducts/RelatedProducts";
 
 function Product() {
   const { all_products } = useContext(ShopContext);
@@ -13,6 +14,7 @@ function Product() {
       <div>
         <Breadcrumbs product={product} />
         <ProductDisplay product={product} />
+        <RelatedProducts />
       </div>
     </>
   );
