@@ -1,66 +1,66 @@
-import p1_image from "./chibis/p5.webp";
-import p2_image from "./chibis/p6.webp";
-import p3_image from "./chibis/p7.webp";
-import p4_image from "./chibis/p8.webp";
-import c1_image from "./cards/card3.webp";
-import c2_image from "./cards/card4.webp";
-import c3_image from "./cards/card5.webp";
-import c4_image from "./cards/card6.webp";
+import hiyori_chibi from "./chibis/hiyori_chibi.webp";
+import natsume_chibi from "./chibis/natsume_chibi.webp";
+import wataru_chibi from "./chibis/wataru_chibi.webp";
+import tatsumi_chibi from "./chibis/tatsumi_chibi.webp";
+import yuzuru_card from "./cards/yuzuru_card.webp";
+import mika_card from "./cards/mika_card.webp";
+import chiaki_card from "./cards/chiaki_card.webp";
+import rei_card from "./cards/rei_card.webp";
 
 let new_collections = [
   {
-    id: 1,
+    id: "Hiyori_SS_chibi",
     name: "(SS Finals Outfit) Hiyori Tomoe Chibi",
-    image: p1_image,
+    image: hiyori_chibi,
     new_price: 20.0,
     old_price: 35.0,
   },
   {
-    id: 2,
+    id: "Natsume_Tri_chibi",
     name: "(Tri-Lights Outfit) Natsume Sakasaki Chibi",
-    image: p2_image,
+    image: natsume_chibi,
     new_price: 10.0,
     old_price: 25.0,
   },
   {
-    id: 3,
+    id: "Wataru_Crusing_chibi",
     name: "(Cruising Style Outfit) Wataru Hibiki Chibi",
-    image: p3_image,
+    image: wataru_chibi,
     new_price: 10.0,
     old_price: 25.0,
   },
   {
-    id: 4,
+    id: "Tatsumi_MegRythm_chibi",
     name: "(MegRhythm Pajama Outfit) Tatsumi Kazehaya Chibi",
-    image: p4_image,
+    image: tatsumi_chibi,
     new_price: 10.0,
     old_price: 25.0,
   },
   {
-    id: 5,
+    id: "Yuzuru_Passion_card",
     name: "(Passion Within) Yuzuru Fushimi card",
-    image: c1_image,
+    image: yuzuru_card,
     new_price: 20.0,
     old_price: 35.0,
   },
   {
-    id: 6,
-    name: "(Reminiscing on the Four Seasons) Mao Isara card",
-    image: c2_image,
+    id: "Mika_Creator_card",
+    name: "(Creator of Machina) Mika Kagehira card",
+    image: mika_card,
     new_price: 10.0,
     old_price: 25.0,
   },
   {
-    id: 7,
+    id: "Chiaki_Meteor_card",
     name: "(Meteor with Red Resolve) Chiaki Morisawa card",
-    image: c3_image,
+    image: chiaki_card,
     new_price: 10.0,
     old_price: 25.0,
   },
   {
-    id: 8,
-    name: "(A Figure Like a Mirage) Yuta Aoi card",
-    image: c4_image,
+    id: "Rei_Match_card",
+    name: "(Match of Succession) Rei Sakuma card",
+    image: rei_card,
     new_price: 10.0,
     old_price: 25.0,
   },

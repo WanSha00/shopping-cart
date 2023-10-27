@@ -18,9 +18,6 @@ import cards_banner from "./assets/cards_banner.webp";
 function App() {
   return (
     <>
-      {/* <div>
-        <Navbar />
-      </div> */}
       <div>
         <BrowserRouter>
           <Navbar />
@@ -35,7 +32,7 @@ function App() {
               element={<ShopCategory banner={cards_banner} category="card" />}
             />
             <Route path="/product" element={<Product />} />
-            <Route path=":productId" element={<Product />} />
+            <Route path="/product/:productId" element={<Product />} />
             <Route path="/cart" element={<Cart />} />
           </Routes>
           <Footer />

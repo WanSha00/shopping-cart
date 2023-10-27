@@ -1,34 +1,34 @@
-import p1_image from "./chibis/p1.webp";
-import p2_image from "./chibis/p2.webp";
-import p3_image from "./cards/card1.webp";
-import p4_image from "./cards/card2.webp";
+import eichi_chibi from "./chibis/eichi_chibi.webp";
+import rei_chibi from "./chibis/rei_chibi.webp";
+import himeru_card from "./cards/himeru_card.webp";
+import hinata_card from "./cards/hinata_card.webp";
 
 let data_product = [
   {
-    id: 1,
+    id: "Eichi_MascotIV_chibi",
     name: "(Mascot IV Outfit) Eichi Tenshouin Chibi",
-    image: p1_image,
+    image: eichi_chibi,
     new_price: 20.0,
     old_price: 35.0,
   },
   {
-    id: 2,
+    id: "Rei_ModsIV_chibi",
     name: "(Mods IV Outfit) Rei Sakuma Chibi",
-    image: p2_image,
+    image: rei_chibi,
     new_price: 10.0,
     old_price: 25.0,
   },
   {
-    id: 3,
+    id: "Himeru_Shards_card",
     name: "(Shards of a Desired Brilliance) HiMERU card",
-    image: p3_image,
+    image: himeru_card,
     new_price: 10.0,
     old_price: 25.0,
   },
   {
-    id: 4,
-    name: "(Howling Guitarist) Koga Oogami card",
-    image: p4_image,
+    id: "Hinata_Challenging_card",
+    name: "(Challenging the Big Ocean) Hinata Aoi card",
+    image: hinata_card,
     new_price: 10.0,
     old_price: 25.0,
   },
