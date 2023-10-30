@@ -25,3 +25,7 @@
   margin-top: 50px;
   gap: 30px;
 }
+
+.no-prod-img {
+  height: 250px;
+}

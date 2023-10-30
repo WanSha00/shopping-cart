@@ -14,7 +14,7 @@ function Product() {
       <div>
         <Breadcrumbs product={product} />
         <ProductDisplay product={product} />
-        <RelatedProducts />
+        <RelatedProducts product={product} />
       </div>
     </>
   );

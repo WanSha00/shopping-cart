@@ -12,6 +12,16 @@ import yuzuru_card from "./cards/yuzuru_card.webp";
 import mika_card from "./cards/mika_card.webp";
 import chiaki_card from "./cards/chiaki_card.webp";
 import rei_card from "./cards/rei_card.webp";
+import natsume_card from "./cards/natsume_card.webp";
+import wataru_card from "./cards/wataru_card.webp";
+import chiaki_burning_card from "./cards/chiaki_burning_card.webp";
+import tatsumi_satellite_card from "./cards/tatsumi_satellite_card.webp";
+import hinata_sweets_card from "./cards/hinata_sweets_card.webp";
+import rinne_igniting_card from "./cards/rinne_igniting_card.webp";
+import eichi_atlantis_chibi from "./chibis/eichi_atlantis_chibi.webp";
+import wataru_bunny_chibi from "./chibis/wataru_bunny_chibi.webp";
+import yuzuru_primavera_chibi from "./chibis/yuzuru_primavera_chibi.webp";
+import chiaki_tropical_chibi from "./chibis/chiaki_tropical_chibi.webp";
 
 let all_products = [
   {
@@ -22,6 +32,9 @@ let all_products = [
     old_price: 35.0,
     info1: "",
     info2: "",
+    popular: 1,
+    newItem: 0,
+    tag: "Eichi",
     category: "chibi",
   },
   {
@@ -32,6 +45,9 @@ let all_products = [
     old_price: 25.0,
     info1: "",
     info2: "",
+    popular: 1,
+    newItem: 0,
+    tag: "Rei",
     category: "chibi",
   },
   {
@@ -42,6 +58,9 @@ let all_products = [
     old_price: 35.0,
     info1: "",
     info2: "",
+    popular: 0,
+    newItem: 1,
+    tag: "Hiyori",
     category: "chibi",
   },
   {
@@ -52,6 +71,9 @@ let all_products = [
     old_price: 25.0,
     info1: "",
     info2: "",
+    popular: 0,
+    newItem: 1,
+    tag: "Natsume",
     category: "chibi",
   },
   {
@@ -62,6 +84,9 @@ let all_products = [
     old_price: 25.0,
     info1: "",
     info2: "",
+    popular: 0,
+    newItem: 1,
+    tag: "Wataru",
     category: "chibi",
   },
   {
@@ -72,6 +97,9 @@ let all_products = [
     old_price: 25.0,
     info1: "",
     info2: "",
+    popular: 0,
+    newItem: 1,
+    tag: "Tatsumi",
     category: "chibi",
   },
   {
@@ -82,6 +110,9 @@ let all_products = [
     old_price: 25.0,
     info1: "",
     info2: "",
+    popular: 0,
+    newItem: 0,
+    tag: "Rinne",
     category: "chibi",
   },
   {
@@ -92,6 +123,61 @@ let all_products = [
     old_price: 25.0,
     info1: "",
     info2: "",
+    popular: 0,
+    newItem: 0,
+    tag: "Ritsu",
+    category: "chibi",
+  },
+  {
+    id: "Eichi_Atlantis_chibi",
+    name: "(Atlantis Outfit) Eichi Tenshouin Chibi",
+    image: eichi_atlantis_chibi,
+    new_price: 20.0,
+    old_price: 35.0,
+    info1: "",
+    info2: "",
+    popular: 0,
+    newItem: 0,
+    tag: "Eichi",
+    category: "chibi",
+  },
+  {
+    id: "Wataru_Bunny_chibi",
+    name: "(Puffy☆Bunny  Outfit) Wataru Hibiki Chibi",
+    image: wataru_bunny_chibi,
+    new_price: 20.0,
+    old_price: 35.0,
+    info1: "",
+    info2: "",
+    popular: 0,
+    newItem: 0,
+    tag: "Wataru",
+    category: "chibi",
+  },
+  {
+    id: "Yuzuru_Primavera_chibi",
+    name: "(Primavera Outfit) Yuzuru Fushimi Chibi",
+    image: yuzuru_primavera_chibi,
+    new_price: 20.0,
+    old_price: 35.0,
+    info1: "",
+    info2: "",
+    popular: 0,
+    newItem: 0,
+    tag: "Yuzuru",
+    category: "chibi",
+  },
+  {
+    id: "Chiaki_Tropical_chibi",
+    name: "(Tropical Outfit) Chiaki Morisawa Chibi",
+    image: chiaki_tropical_chibi,
+    new_price: 20.0,
+    old_price: 35.0,
+    info1: "",
+    info2: "",
+    popular: 0,
+    newItem: 0,
+    tag: "Chiaki",
     category: "chibi",
   },
   {
@@ -103,6 +189,9 @@ let all_products = [
     info1: "Reminiscence＊The Obbligato Played by Iridescence",
     info2:
       "After living emptily, alone for so long, your dream is now mine as well.",
+    popular: 1,
+    newItem: 0,
+    tag: "Himeru",
     category: "card",
   },
   {
@@ -113,6 +202,9 @@ let all_products = [
     old_price: 25.0,
     info1: "The Ebb and Flow of the Big Ocean",
     info2: 'So let\'s find it together, where "same" and "different" overlap',
+    popular: 1,
+    newItem: 0,
+    tag: "Hinata",
     category: "card",
   },
   {
@@ -124,6 +216,9 @@ let all_products = [
     info1: "Fight to the Death on the Silver Screen",
     info2:
       "But I'm able to make that dream come true even now, even for just a moment!",
+    popular: 0,
+    newItem: 1,
+    tag: "Yuzuru",
     category: "card",
   },
   {
@@ -134,6 +229,9 @@ let all_products = [
     old_price: 25.0,
     info1: "Originality◆The Corridor of Machina Going Ahead",
     info2: "We'll do our best to reach their hearts with our song. ♪",
+    popular: 0,
+    newItem: 1,
+    tag: "Mika",
     category: "card",
   },
   {
@@ -145,6 +243,9 @@ let all_products = [
     info1: "Transform! The Comet Show Connecting the Stars",
     info2:
       "Turning the hopes and dreams within everyone's heart into power—here rises the heroes of justice!",
+    popular: 0,
+    newItem: 1,
+    tag: "Chiaki",
     category: "card",
   },
   {
@@ -156,6 +257,93 @@ let all_products = [
     info1: "Learning from the Past",
     info2:
       "Wandering the nights among thoudands of towns, relishing blood under the moon—",
+    popular: 0,
+    newItem: 1,
+    tag: "Rei",
+    category: "card",
+  },
+
+  {
+    id: "Natsume_Eccentric_card",
+    name: "(Eccentric Ensemble) Natsume Sakasaki card",
+    image: natsume_card,
+    new_price: 10.0,
+    old_price: 25.0,
+    info1: "The Eccentric Fine",
+    info2: "This tiME, I'll open my eyes and face this realiTY.",
+    popular: 0,
+    newItem: 0,
+    tag: "Natsume",
+    category: "card",
+  },
+
+  {
+    id: "Wataru_Lively_card",
+    name: "(Lively Bunny) Wataru Hibiki",
+    image: wataru_card,
+    new_price: 10.0,
+    old_price: 25.0,
+    info1: "Easter To You",
+    info2:
+      "[Easter Festival] has just begun. Please enjoy with us on the way to Easter...♪",
+    popular: 0,
+    newItem: 0,
+    tag: "Wataru",
+    category: "card",
+  },
+  {
+    id: "Chiaki_Burning_card",
+    name: "(Burning Bridegroom Training) Chiaki Morisawa",
+    image: chiaki_burning_card,
+    new_price: 10.0,
+    old_price: 25.0,
+    info1: "Wedding March!",
+    info2: "A happy end with smiles on everyone's faces...♪",
+    popular: 0,
+    newItem: 0,
+    tag: "Chiaki",
+    category: "card",
+  },
+
+  {
+    id: "Tatsumi_Satellite_card",
+    name: "(Satellite Revolutionary) Tatsumi Kazehaya",
+    image: tatsumi_satellite_card,
+    new_price: 10.0,
+    old_price: 25.0,
+    info1: "1st Stage Satellite",
+    info2: "I should learn from everyone on stage. Let me smile and sing.",
+    popular: 0,
+    newItem: 0,
+    tag: "Tatsumi",
+    category: "card",
+  },
+
+  {
+    id: "Hinata_Sweets_card",
+    name: "(Spicy Sweets) Hinata Aoi",
+    image: hinata_sweets_card,
+    new_price: 10.0,
+    old_price: 25.0,
+    info1: "Halloween BOX",
+    info2: "Am, am I still dreaming?",
+    popular: 0,
+    newItem: 0,
+    tag: "Hinata",
+    category: "card",
+  },
+
+  {
+    id: "Rinne_Igniting_card",
+    name: "(Igniting Motivation) Rinne Amagi ",
+    image: rinne_igniting_card,
+    new_price: 10.0,
+    old_price: 25.0,
+    info1: "The Unknown Holy Night and Nighthead!",
+    info2: "So please, follow us until the end~",
+    popular: 0,
+    newItem: 0,
+    tag: "Rinne",
     category: "card",
   },
 ];

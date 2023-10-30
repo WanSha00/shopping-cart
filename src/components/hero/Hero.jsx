@@ -1,9 +1,9 @@
 import "./Hero.css";
-import hand_icon from "../../assets/hand_icon.svg";
+import new_icon from "../../assets/hero_new.webp";
 import arrow_icon from "../../assets/arrow_icon.svg";
 import hero_image from "../../assets/hero.webp";
 
-function Hero() {
+function Hero({ scroll }) {
   return (
     <>
       <div className="hero">
@@ -12,14 +12,14 @@ function Hero() {
           <div>
             <div className="hero-hand-icon">
               <p>new</p>
-              <img src={hand_icon} alt="" />
+              <img src={new_icon} alt="" />
             </div>
             <p>collections</p>
-            <p>for everyone</p>
+            <p>10% OFF!</p>
           </div>
 
           <div className="hero-latest-btn">
-            <div>Latest Collection</div>
+            <div onClick={scroll}>Latest Collection</div>
             <img src={arrow_icon} alt="" />
           </div>
         </div>

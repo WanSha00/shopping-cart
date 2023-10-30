@@ -1,10 +1,11 @@
 .offers {
   width: 65%;
-  height: 67vh;
+  height: auto;
   display: flex;
   margin: auto;
   padding: 0px 120px;
-  margin-bottom: 100px;
+  padding-top: 30px;
+  margin-bottom: 80px;
   background: linear-gradient(
     180deg,
     rgb(176, 250, 255) 0%,
@@ -26,19 +27,21 @@
 }
 
 .offers-left p {
+  margin: 10px 0px;
   font-size: 22px;
 }
 
 .offers-left button {
-  width: 282px;
-  height: 70px;
-  border-radius: 35px;
+  width: 200px;
+  height: 50px;
+  padding: 10px;
+  border-radius: 10px;
   background: rgb(199, 58, 58);
   border: none;
   color: white;
   font-size: 22px;
   font-weight: 500;
-  margin-top: 30px;
+  margin-top: 10px;
   cursor: pointer;
 }
 

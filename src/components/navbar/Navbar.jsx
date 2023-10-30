@@ -1,13 +1,12 @@
 import "./Navbar.css";
 import logo from "../../assets/logo.png";
 import cart_icon from "../../assets/cart-outline.svg";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import { useParams } from "react-router-dom";
+import { ShopContext } from "../../context/ShopContext";
 
-function Navbar() {
-  const [menu, setMenu] = useState("home");
-  const { name } = useParams();
+function Navbar({ menu, setMenu }) {
+  const { getTotalCartItems } = useContext(ShopContext);
 
   return (
     <>
@@ -58,16 +57,9 @@ function Navbar() {
             <img src={cart_icon} alt="" />
           </Link>
 
-          <div className="nav-cart-count">45</div>
+          <div className="nav-cart-count">{getTotalCartItems()}</div>
         </div>
       </div>
-      {/* {name === "cat1" ? (
-        <h1>CAT1</h1>
-      ) : name === "cat2" ? (
-        <h1>CAT2</h1>
-      ) : (
-        <h1>HOME</h1>
-      )} */}
     </>
   );
 }

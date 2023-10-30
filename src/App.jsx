@@ -14,15 +14,17 @@ import Cart from "./pages/Cart";
 import Footer from "./components/footer/Footer";
 import chibis_banner from "./assets/chibis_banner.webp";
 import cards_banner from "./assets/cards_banner.webp";
+import { useState } from "react";
 
 function App() {
+  const [menu, setMenu] = useState("home");
   return (
     <>
       <div>
         <BrowserRouter>
-          <Navbar />
+          <Navbar menu={menu} setMenu={setMenu} />
           <Routes>
-            <Route path="/" element={<Shop />} />
+            <Route path="/" element={<Shop menu={menu} setMenu={setMenu} />} />
             <Route
               path="/chibis"
               element={<ShopCategory banner={chibis_banner} category="chibi" />}

@@ -1,0 +1,150 @@
+.cartItems {
+  margin: 100px 170px;
+}
+
+.cartItems hr {
+  height: 3px;
+  background: #e2e2e2;
+  border: 0;
+}
+
+.cartItems-emptyMsg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+.cartItems-emptyMsg img {
+  margin-top: 40px;
+  height: 150px;
+}
+
+.cartItems-main {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr 1fr;
+  align-items: center;
+  gap: 75px;
+  padding: 20px;
+  color: #454545;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.cartItems-format {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.cartItems-productIcon {
+  height: 62px;
+}
+
+.cartItems-removeIcon {
+  width: 15px;
+  margin: 0px 40px;
+  cursor: pointer;
+}
+
+.cartItems-quantity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+.cartItems-quantity-no {
+  width: 54px;
+  height: 40px;
+  border: 2px solid #ebebeb;
+  background: #fff;
+  color: #ff5a5a;
+}
+
+.cartItems-quantity-btn {
+  width: 40px;
+  height: 40px;
+}
+
+.cartItems-down {
+  display: flex;
+  margin: 100px 0px;
+}
+
+.cartItems-total {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-right: 200px;
+  gap: 40px;
+}
+
+.cartItems-totalItems {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0px;
+}
+
+.cartItems-totalItems h3 {
+  font-size: 30px;
+}
+
+.cartItems-totalItems .total {
+  color: #ff5a5a;
+}
+
+.cartItems-total button {
+  width: 262px;
+  height: 58px;
+  outline: none;
+  border: none;
+  background: #ff5a5a;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cartItems-promoCode {
+  flex: 1;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.cartItems-promoCode p {
+  color: #555;
+}
+
+.cartItems-promobox {
+  width: 504px;
+  height: 58px;
+  margin-top: 15px;
+  padding-left: 20px;
+  background: #eaeaea;
+}
+
+.cartItems-promobox input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 16px;
+  width: 330px;
+  height: 50px;
+  text-transform: uppercase;
+}
+
+.cartItems-promobox button {
+  width: 170px;
+  height: 58px;
+  font-size: 16px;
+  background: black;
+  color: white;
+  cursor: pointer;
+}

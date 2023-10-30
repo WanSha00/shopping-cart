@@ -12,8 +12,8 @@ function Footer() {
           <p>MYSHOP</p>
         </div>
         <ul className="footer-links">
-          <li>Company</li>
-          <li>Products</li>
+          <li>Cards</li>
+          <li>Chibis</li>
           <li>About</li>
           <li>Contacts</li>
         </ul>
