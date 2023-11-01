@@ -5,7 +5,7 @@ import { ShopContext } from "../../context/ShopContext";
 function ProductDisplay({ product }) {
   const { id, category, image, name, old_price, new_price, info1, info2 } =
     product;
-  const { addToCart } = useContext(ShopContext);
+  const { cartItems, addToCart } = useContext(ShopContext);
   const [type, setType] = useState(null);
   return (
     <>
@@ -79,6 +79,7 @@ function ProductDisplay({ product }) {
             </div>
           </div>
         </div>
+        <div className="cart-qty">In cart: {cartItems[id]}</div>
         <button
           onClick={() => {
             addToCart(id);

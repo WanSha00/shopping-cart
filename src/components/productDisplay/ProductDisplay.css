@@ -99,6 +99,10 @@
   color: white;
 }
 
+.cart-qty {
+  align-self: center;
+  margin-top: 50px;
+}
 .addcart-btn {
   padding: 20px;
   width: 200px;
@@ -110,5 +114,5 @@
   outline: none;
   cursor: pointer;
   align-self: center;
-  margin-top: 50px;
+  margin-top: 10px;
 }
