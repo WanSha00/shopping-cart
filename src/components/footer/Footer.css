@@ -24,12 +24,20 @@
   font-weight: 700;
 }
 
+.footer-logo a {
+  color: purple;
+}
+
 .footer-links {
   display: flex;
   list-style: none;
   gap: 50px;
   color: rgb(133, 19, 133);
   font-size: 20px;
+}
+
+.footer-links a {
+  color: rgb(133, 19, 133);
 }
 
 .footer-links li {

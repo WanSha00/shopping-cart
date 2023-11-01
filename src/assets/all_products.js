@@ -182,7 +182,7 @@ let all_products = [
   },
   {
     id: "Himeru_Shards_card",
-    name: "(Shards of a Desired Brilliance) HiMERU card",
+    name: "(Shards of a Desired Brilliance) HiMERU Card",
     image: himeru_card,
     new_price: 10.0,
     old_price: 25.0,
@@ -196,7 +196,7 @@ let all_products = [
   },
   {
     id: "Hinata_Challenging_card",
-    name: "(Challenging the Big Ocean) Hinata Aoi card",
+    name: "(Challenging the Big Ocean) Hinata Aoi Card",
     image: hinata_card,
     new_price: 10.0,
     old_price: 25.0,
@@ -209,7 +209,7 @@ let all_products = [
   },
   {
     id: "Yuzuru_Passion_card",
-    name: "(Passion Within) Yuzuru Fushimi card",
+    name: "(Passion Within) Yuzuru Fushimi Card",
     image: yuzuru_card,
     new_price: 20.0,
     old_price: 35.0,
@@ -223,7 +223,7 @@ let all_products = [
   },
   {
     id: "Mika_Creator_card",
-    name: "(Creator of Machina) Mika Kagehira card",
+    name: "(Creator of Machina) Mika Kagehira Card",
     image: mika_card,
     new_price: 10.0,
     old_price: 25.0,
@@ -236,7 +236,7 @@ let all_products = [
   },
   {
     id: "Chiaki_Meteor_card",
-    name: "(Meteor with Red Resolve) Chiaki Morisawa card",
+    name: "(Meteor with Red Resolve) Chiaki Morisawa Card",
     image: chiaki_card,
     new_price: 10.0,
     old_price: 25.0,
@@ -250,7 +250,7 @@ let all_products = [
   },
   {
     id: "Rei_Match_card",
-    name: "(Match of Succession) Rei Sakuma card",
+    name: "(Match of Succession) Rei Sakuma Card",
     image: rei_card,
     new_price: 10.0,
     old_price: 25.0,
@@ -265,7 +265,7 @@ let all_products = [
 
   {
     id: "Natsume_Eccentric_card",
-    name: "(Eccentric Ensemble) Natsume Sakasaki card",
+    name: "(Eccentric Ensemble) Natsume Sakasaki Card",
     image: natsume_card,
     new_price: 10.0,
     old_price: 25.0,
@@ -279,7 +279,7 @@ let all_products = [
 
   {
     id: "Wataru_Lively_card",
-    name: "(Lively Bunny) Wataru Hibiki",
+    name: "(Lively Bunny) Wataru Hibiki Card",
     image: wataru_card,
     new_price: 10.0,
     old_price: 25.0,
@@ -293,7 +293,7 @@ let all_products = [
   },
   {
     id: "Chiaki_Burning_card",
-    name: "(Burning Bridegroom Training) Chiaki Morisawa",
+    name: "(Burning Bridegroom Training) Chiaki Morisawa Card",
     image: chiaki_burning_card,
     new_price: 10.0,
     old_price: 25.0,
@@ -307,7 +307,7 @@ let all_products = [
 
   {
     id: "Tatsumi_Satellite_card",
-    name: "(Satellite Revolutionary) Tatsumi Kazehaya",
+    name: "(Satellite Revolutionary) Tatsumi Kazehaya Card",
     image: tatsumi_satellite_card,
     new_price: 10.0,
     old_price: 25.0,
@@ -321,7 +321,7 @@ let all_products = [
 
   {
     id: "Hinata_Sweets_card",
-    name: "(Spicy Sweets) Hinata Aoi",
+    name: "(Spicy Sweets) Hinata Aoi Card",
     image: hinata_sweets_card,
     new_price: 10.0,
     old_price: 25.0,
@@ -335,7 +335,7 @@ let all_products = [
 
   {
     id: "Rinne_Igniting_card",
-    name: "(Igniting Motivation) Rinne Amagi ",
+    name: "(Igniting Motivation) Rinne Amagi Card",
     image: rinne_igniting_card,
     new_price: 10.0,
     old_price: 25.0,

@@ -2,18 +2,46 @@ import "./Footer.css";
 import footer_logo from "../../assets/logo.png";
 import insta_icon from "../../assets/instagram.svg";
 import twitter_icon from "../../assets/twitter.svg";
+import { Link } from "react-router-dom";
 
-function Footer() {
+function Footer({ setMenu }) {
   return (
     <>
       <div className="footer">
         <div className="footer-logo">
           <img src={footer_logo} alt="" />
-          <p>MYSHOP</p>
+          <p
+            onClick={() => {
+              setMenu("home");
+              window.scrollTo(0, 0);
+            }}
+          >
+            <Link style={{ textDecoration: "none" }} to="/">
+              MYSHOP
+            </Link>
+          </p>
         </div>
         <ul className="footer-links">
-          <li>Cards</li>
-          <li>Chibis</li>
+          <li
+            onClick={() => {
+              setMenu("cards");
+              window.scrollTo(0, 0);
+            }}
+          >
+            <Link style={{ textDecoration: "none" }} to="/cards">
+              Cards
+            </Link>
+          </li>
+          <li
+            onClick={() => {
+              setMenu("chibis");
+              window.scrollTo(0, 0);
+            }}
+          >
+            <Link style={{ textDecoration: "none" }} to="/chibis">
+              Chibis
+            </Link>
+          </li>
           <li>About</li>
           <li>Contacts</li>
         </ul>

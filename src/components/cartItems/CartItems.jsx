@@ -3,20 +3,24 @@ import "./CartItems.css";
 import { ShopContext } from "../../context/ShopContext";
 import removeIcon from "../../assets/removeIcon.svg";
 import emptyIcon from "../../assets/empty_cart.webp";
+import purchase_img from "../../assets/purchase.webp";
 
 function CartItems() {
   const {
     all_products,
     cartItems,
+    setCartItems,
     addToCart,
     removeFromCart,
     removeItem,
     getTotalCartAmount,
+    getDefaultCart,
   } = useContext(ShopContext);
 
   const [promo, setPromo] = useState(null);
   const [discount, setDiscount] = useState(0);
   const [promoDisabled, setPromoDisabled] = useState(false);
+  const [purchase, setPurchase] = useState(false);
 
   const handlePromo = (e) => {
     setPromo(e.target.value);
@@ -29,13 +33,17 @@ function CartItems() {
     }
   };
 
+  const handlePurchase = () => {
+    setPurchase(true);
+  };
+
   let totalItems = getTotalCartAmount();
   let totalPayment = totalItems + 3 - discount;
 
   return (
     <>
       <div className="cartItems">
-        {totalItems > 0 && (
+        {(!purchase && totalItems) > 0 && (
           <>
             <div className="cartItems-main">
               <div className="center">
@@ -68,73 +76,118 @@ function CartItems() {
           </div>
         )}
 
-        {all_products.map((item) => {
-          if (cartItems[item.id] > 0) {
-            return (
-              <>
-                <div key={item.id}>
-                  <div className="cartItems-format cartItems-main">
-                    <div className="center">
-                      {" "}
-                      <img
-                        className="cartItems-productIcon"
-                        src={item.image}
-                        alt=""
-                      />
+        {purchase && totalItems > 0 && (
+          <div className="cartItems-purchaseMsg">
+            <p className="purchase-title">Thank you for your purchase!</p>
+
+            {all_products.map((item) => {
+              if (cartItems[item.id] > 0) {
+                return (
+                  <>
+                    <div className="purchase-details">
+                      <p>
+                        {item.name}.....${item.new_price}x{cartItems[item.id]}
+                      </p>
+                      <div>${item.new_price * cartItems[item.id]}</div>
                     </div>
-                    <div className="center">
-                      <p>{item.name}</p>
-                    </div>
-                    <div className="center">
-                      <p>${item.new_price}</p>
-                    </div>
-                    <div className="center">
-                      <div className=" cartItems-quantity">
-                        <button
+                  </>
+                );
+              }
+            })}
+            <div className="purchase-totals">
+              <div>
+                <p>Subtotal</p>
+                <p>Shipping Fee</p>
+                <p>Promo</p>
+                <p className="total">Total payment</p>
+              </div>
+
+              <div className="fees">
+                <div>${getTotalCartAmount()}</div>
+                <div>$3</div>
+                <div>-${discount}</div>
+                <div className="total">${totalPayment}</div>
+              </div>
+            </div>
+            <img src={purchase_img} alt="" />
+            <button
+              onClick={() => {
+                setCartItems(getDefaultCart());
+              }}
+            >
+              CONFIRM
+            </button>
+          </div>
+        )}
+
+        {!purchase &&
+          all_products.map((item) => {
+            if (cartItems[item.id] > 0) {
+              return (
+                <>
+                  <div key={item.id}>
+                    <div className="cartItems-format cartItems-main">
+                      <div className="center">
+                        {" "}
+                        <img
+                          className="cartItems-productIcon"
+                          src={item.image}
+                          alt=""
+                        />
+                      </div>
+                      <div className="center">
+                        <p>{item.name}</p>
+                      </div>
+                      <div className="center">
+                        <p>${item.new_price}</p>
+                      </div>
+                      <div className="center">
+                        <div className=" cartItems-quantity">
+                          <button
+                            onClick={() => {
+                              removeFromCart(item.id);
+                            }}
+                            className="cartItems-quantity-btn"
+                          >
+                            -
+                          </button>
+                          <button className="cartItems-quantity-no">
+                            {cartItems[item.id]}
+                          </button>
+                          <button
+                            onClick={() => {
+                              addToCart(item.id);
+                            }}
+                            className="cartItems-quantity-btn"
+                          >
+                            +
+                          </button>
+                        </div>
+                      </div>
+
+                      <div className="center">
+                        <p>${item.new_price * cartItems[item.id]}</p>
+                      </div>
+
+                      <div className="center">
+                        <img
+                          className="cartItems-removeIcon"
+                          src={removeIcon}
+                          alt=""
                           onClick={() => {
-                            removeFromCart(item.id);
+                            removeItem(item.id);
                           }}
-                          className="cartItems-quantity-btn"
-                        >
-                          -
-                        </button>
-                        <button className="cartItems-quantity-no">
-                          {cartItems[item.id]}
-                        </button>
-                        <button
-                          onClick={() => {
-                            addToCart(item.id);
-                          }}
-                          className="cartItems-quantity-btn"
-                        >
-                          +
-                        </button>
+                        />
                       </div>
                     </div>
-
-                    <div className="center">
-                      <p>${item.new_price * cartItems[item.id]}</p>
-                    </div>
-
-                    <div className="center">
-                      <img
-                        className="cartItems-removeIcon"
-                        src={removeIcon}
-                        alt=""
-                        onClick={() => {
-                          removeItem(item.id);
-                        }}
-                      />
-                    </div>
+                    <hr />
                   </div>
-                  <hr />
-                </div>
-              </>
-            );
-          }
-        })}
+                </>
+              );
+            }
+          })}
 
-        {totalItems > 0 && (
+        {(!purchase && totalItems) > 0 && (
           <div className="cartItems-down">
             <div className="cartItems-total">
               <h1>Payment Details</h1>
@@ -159,7 +212,9 @@ function CartItems() {
                   <h3 className="total">${totalPayment}</h3>
                 </div>
               </div>
-              <button>PROCEED TO CHECKOUT</button>
+              <button onClick={() => handlePurchase()}>
+                PROCEED TO CHECKOUT
+              </button>
             </div>
             <div className="cartItems-promoCode">
               {!promoDisabled && <p>Enter promo code</p>}

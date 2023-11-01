@@ -84,10 +84,19 @@
 
 .productDisplay-right-types div {
   padding: 15px 24px;
-  background: #fbfbfb;
   border: 1px solid #ebebeb;
   border-radius: 3px;
   cursor: pointer;
+}
+
+.productDisplay-right-types :hover {
+  background-color: #656565;
+  color: white;
+}
+
+.select {
+  background-color: #656565;
+  color: white;
 }
 
 .addcart-btn {

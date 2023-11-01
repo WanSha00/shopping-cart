@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import "./ProductDisplay.css";
 import { ShopContext } from "../../context/ShopContext";
 
@@ -6,7 +6,7 @@ function ProductDisplay({ product }) {
   const { id, category, image, name, old_price, new_price, info1, info2 } =
     product;
   const { addToCart } = useContext(ShopContext);
-
+  const [type, setType] = useState(null);
   return (
     <>
       <div className="display">
@@ -44,15 +44,35 @@ function ProductDisplay({ product }) {
               <div className="productDisplay-right-types">
                 {category === "chibi" && (
                   <>
-                    <div>Sticker</div>
-                    <div>Keychain</div>
+                    <div
+                      className={type === "Sticker" ? "select" : ""}
+                      onClick={() => setType("Sticker")}
+                    >
+                      Sticker
+                    </div>
+                    <div
+                      className={type === "Keychain" ? "select" : ""}
+                      onClick={() => setType("Keychain")}
+                    >
+                      Keychain
+                    </div>
                   </>
                 )}
 
                 {category === "card" && (
                   <>
-                    <div>Poster</div>
-                    <div>Card</div>
+                    <div
+                      className={type === "Poster" ? "select" : ""}
+                      onClick={() => setType("Poster")}
+                    >
+                      Poster
+                    </div>
+                    <div
+                      className={type === "Card" ? "select" : ""}
+                      onClick={() => setType("Card")}
+                    >
+                      Card
+                    </div>
                   </>
                 )}
               </div>

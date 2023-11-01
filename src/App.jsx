@@ -1,12 +1,6 @@
 import "./App.css";
 import Navbar from "./components/navbar/Navbar";
-import {
-  BrowserRouter,
-  createBrowserRouter,
-  Route,
-  RouterProvider,
-  Routes,
-} from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Shop from "./pages/Shop";
 import ShopCategory from "./pages/ShopCategory";
 import Product from "./pages/Product";
@@ -37,7 +31,7 @@ function App() {
             <Route path="/product/:productId" element={<Product />} />
             <Route path="/cart" element={<Cart />} />
           </Routes>
-          <Footer />
+          <Footer setMenu={setMenu} />
         </BrowserRouter>
       </div>
     </>
