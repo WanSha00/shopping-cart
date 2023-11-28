@@ -1,18 +1,21 @@
+.item-container,
 .item {
-  width: 350px;
+  width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.item p {
-  margin: 6px 0px;
+.item-name {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
   height: 50px;
 }
 
 .item img {
-  height: 370px;
+  height: 300px;
   width: auto;
   border-radius: 10px;
 }

@@ -10,8 +10,9 @@ function Item({ item }) {
           <Link to={`/product/${id}`}>
             <img src={image} alt="" onClick={window.scrollTo(0, 0)} />
           </Link>
-
-          <p>{name}</p>
+          <div className="item-name">
+            <p>{name}</p>
+          </div>
 
           <div className="item-prices">
             <div className="item-price-new">${new_price}</div>

@@ -33,10 +33,11 @@
 }
 
 .shopcategory-products {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  margin: 20px 170px;
-  row-gap: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px 10%;
+  gap: 80px;
 }
 
 .shopcategory-loadmore {

@@ -84,7 +84,7 @@ function CartItems() {
               if (cartItems[item.id] > 0) {
                 return (
                   <>
-                    <div className="purchase-details">
+                    <div className="purchase-details" key={item.id}>
                       <p>
                         {item.name}.....${item.new_price}x{cartItems[item.id]}
                       </p>
